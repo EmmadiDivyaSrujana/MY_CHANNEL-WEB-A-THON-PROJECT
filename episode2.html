@@ -1,0 +1,368 @@
+<html>
+<head>
+    <title>Video Stream</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Belgrano" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+        .site-footer
+        {
+            background-color:#26272b;
+            padding:45px 0 20px;
+            font-size:15px;
+            line-height:24px;
+            color:#737373;
+        }
+        .site-footer hr
+        {
+            border-top-color:#bbb;
+            opacity:0.5
+        }
+        .site-footer hr.small
+        {
+            margin:20px 0
+        }
+        .site-footer h6
+        {
+            color:#fff;
+            font-size:16px;
+            text-transform:uppercase;
+            margin-top:5px;
+            letter-spacing:2px
+        }
+        .site-footer a
+        {
+            color:#737373;
+        }
+        .site-footer a:hover
+        {
+            color:#3366cc;
+            text-decoration:none;
+        }
+        .footer-links
+        {
+            padding-left:0;
+            list-style:none
+        }
+        .footer-links li
+        {
+            display:block
+        }
+        .footer-links a
+        {
+            color:#737373
+        }
+        .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+        {
+            color:#3366cc;
+            text-decoration:none;
+        }
+        .footer-links.inline li
+        {
+            display:inline-block
+        }
+        .site-footer .social-icons
+        {
+            text-align:right
+        }
+        .site-footer .social-icons a
+        {
+            width:40px;
+            height:40px;
+            line-height:40px;
+            margin-left:6px;
+            margin-right:0;
+            border-radius:100%;
+            background-color:#33353d
+        }
+        .copyright-text
+        {
+            margin:0
+        }
+        @media (max-width:991px)
+        {
+            .site-footer [class^=col-]
+            {
+                margin-bottom:30px
+            }
+        }
+        @media (max-width:767px)
+        {
+            .site-footer
+            {
+                padding-bottom:0
+            }
+            .site-footer .copyright-text,.site-footer .social-icons
+            {
+                text-align:center
+            }
+        }
+        .social-icons
+        {
+            padding-left:0;
+            margin-bottom:0;
+            list-style:none
+        }
+        .social-icons li
+        {
+            display:inline-block;
+            margin-bottom:4px
+        }
+        .social-icons li.title
+        {
+            margin-right:15px;
+            text-transform:uppercase;
+            color:#96a2b2;
+            font-weight:700;
+            font-size:13px
+        }
+        .social-icons a{
+            background-color:#eceeef;
+            color:#818a91;
+            font-size:16px;
+            display:inline-block;
+            line-height:44px;
+            width:44px;
+            height:44px;
+            text-align:center;
+            margin-right:8px;
+            border-radius:100%;
+            -webkit-transition:all .2s linear;
+            -o-transition:all .2s linear;
+            transition:all .2s linear
+        }
+        .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+        {
+            color:#fff;
+            background-color:#29aafe
+        }
+        .social-icons.size-sm a
+        {
+            line-height:34px;
+            height:34px;
+            width:34px;
+            font-size:14px
+        }
+        .social-icons a.facebook:hover
+        {
+            background-color:#3b5998
+        }
+        .social-icons a.twitter:hover
+        {
+            background-color:#00aced
+        }
+        .social-icons a.instagram:hover
+        {
+            background-color:#ea4c89
+        }
+        @media (max-width:767px)
+        {
+            .social-icons li.title
+            {
+                display:block;
+                margin-right:0;
+                font-weight:600
+            }
+        }
+        #abc {
+            margin-top: 10px;
+            margin-right: 50px;
+            margin-left: 50px;
+
+            font-family: "Times New Roman";
+            padding: 10px;
+            background: #fafafa;
+        }
+        #ab{
+            background: #fafafa;
+        }
+        .rating {
+            float:right;
+        }
+
+        /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
+           follow these rules. Every browser that supports :checked also supports :not(), so
+           it doesn’t make the test unnecessarily selective */
+        .rating:not(:checked) > input {
+            position:absolute;
+            top:-9999px;
+            clip:rect(0,0,0,0);
+        }
+
+        .rating:not(:checked) > label {
+            float:right;
+            width:1em;
+            padding:0 .1em;
+            overflow:hidden;
+            white-space:nowrap;
+            cursor:pointer;
+            font-size:200%;
+            line-height:1.2;
+            color:#ddd;
+            text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+        }
+
+        .rating:not(:checked) > label:before {
+            content: '★ ';
+        }
+
+        .rating > input:checked ~ label {
+            color: #f70;
+            text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+        }
+
+        .rating:not(:checked) > label:hover,
+        .rating:not(:checked) > label:hover ~ label {
+            color: gold;
+            text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+        }
+
+        .rating > input:checked + label:hover,
+        .rating > input:checked + label:hover ~ label,
+        .rating > input:checked ~ label:hover,
+        .rating > input:checked ~ label:hover ~ label,
+        .rating > label:hover ~ input:checked ~ label {
+            color: #ea0;
+            text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+        }
+
+        .rating > label:active {
+            position:relative;
+            top:2px;
+            left:2px;
+        }
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">My Channel</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shows</a></li>
+                <li><a href="#">New Content</a></li>
+                <li><a href="#">Interviews</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">  Sign Up  <i class="fas fa-user-plus"></i></a></li>
+                <li><a href="#">  Login  <i class="fas fa-user"></i></a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div id="ab">
+<center> <video src="a.mkv" height="500" width="1300" controls poster="abc.jpg">
+</video></center>
+<hr>
+<div id="abc">
+<a href="#">Home</a>
+>
+<a href="#">The Gifted</a>
+<h1>The Gifted-Episode 2</h1>
+
+    <fieldset class="rating">
+        <legend>Please rate:</legend>
+        <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+        <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+        <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Ok Ok">3 stars</label>
+        <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kind of Time Pass">2 stars</label>
+        <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Money Waste">1 star</label>
+    </fieldset>
+    In a world where mutated humans are treated with distrust and fear, an institute for mutants battles to achieve peaceful co-existence with humanity.<br>
+    Creator: Matt Nix<br>
+    Stars: Stephen Moyer, Amy Acker, Sean Teale | See full cast & crew »<br>
+
+    <br><br>
+
+    <h3><strong>COMMENT SECTION:</strong></h3><br>
+    <div id="myProfile"></div>
+
+
+    <script>
+        var app = angular.module("myComments", []);
+        app.controller("myCtrl", function($scope) {
+            $scope.products = [];
+            $scope.addItem = function () {
+                $scope.products.push($scope.addMe+":"+$scope.addMy);
+            }
+        });
+    </script>
+
+    <div ng-app="myComments" ng-controller="myCtrl">
+        <ul>
+            <p ng-repeat="x in products">{{x}}</p>
+        </ul>
+        NAME : <input ng-model="addMe"><br><br>
+
+        <textarea rows="4" cols="30" ng-model="addMy" placeholder ="POST COMMENTS HERE........"></textarea><br><br>
+        <button ng-click="addItem()">Add Comments</button>
+    </div>
+
+</div>
+</div>
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p class="text-justify"><i>MyChannel.com</i> is the perfect place for all your favourite content like shows, live tv and interviews</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Categories</h6>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shows</a></li>
+                    <li><a href="#">Latest Content</a></li>
+                    <li><a href="#">Interviews</a></li>
+                </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy;  All Rights Reserved by
+                    <a href="#">My Channel</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>
