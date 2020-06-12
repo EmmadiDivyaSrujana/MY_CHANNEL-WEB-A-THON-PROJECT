@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Purrfect</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="HomePage.css">
+	<link href="https://fonts.googleapis.com/css?family=Belgrano" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">My Channel</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="shows.html">Shows</a></li>
+        <li><a href="#">New Content</a></li>
+        <li><a href="#">Interviews</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="signup.html">  Sign Up  <i class="fas fa-user-plus"></i></a></li>
+        <li><a href="signin.html">  Login  <i class="fas fa-user"></i></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div id="content">
+					<h1>My Channel</h1>
+					<h3>The only perfect place for all your favourite shows</h3>
+					<hr>
+					<button class="btn btn-default btn-lg" >  Get Started!</button>
+				</div>
+			</div>
+		</div>
+  </div>
+ <br><br>
+ <div id="slidy-container">
+    <figure id="slidy">
+      <a href="episode1.html"><img src="1.png" alt="eyes"  width="200px" ></a>
+      <a href="episode2.html"><img src="images/img2.jpg" alt="lou" ></a>
+      <a href="episode3.html"><img src="e.png" alt="lucie-2" ></a>
+
+    </figure>
+  </div>
+  <br><br><br>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify"><i>MyChannel.com</i> is the perfect place for all your favourite content like shows, live tv and interviews</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="HomePage.html">Home</a></li>
+              <li><a href="shows.html">Shows</a></li>
+              <li><a href="#">Latest Content</a></li>
+              <li><a href="#">Interviews</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#: footer-links">About Us</a></li>
+              <li><a href="feedback.html">Contact Us</a></li>
+              <li><a href="Privacy.html">Privacy Policy</a></li>
+              <li><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy;  All Rights Reserved by 
+         <a href="#">My Channel</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="http://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+              <li><a class="twitter" href="http://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+              <li><a class="instagram" href="http://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+</footer>
+<script>
+
+var timeOnSlide = 3, 		
+     
+timeBetweenSlides = 1, 	
+    
+    animationstring = 'animation',
+    animation = false,
+    keyframeprefix = '',
+    domPrefixes = 'Webkit Moz O Khtml'.split(' '), 
+    
+    pfx  = '',
+    slidy = document.getElementById("slidy"); 
+if (slidy.style.animationName !== undefined) { animation = true; } 
+
+
+if( animation === false ) {
+  for( var i = 0; i < domPrefixes.length; i++ ) {
+    if( slidy.style[ domPrefixes[i] + 'AnimationName' ] !== undefined ) {
+      pfx = domPrefixes[ i ];
+      animationstring = pfx + 'Animation';
+      keyframeprefix = '-' + pfx.toLowerCase() + '-';
+      animation = true;
+      break;
+    }
+  }
+}
+
+if( animation === false ) {
+  
+} else {
+  var images = slidy.getElementsByTagName("img"),
+      firstImg = images[0], 
+      
+      imgWrap = firstImg.cloneNode(false); 
+  slidy.appendChild(imgWrap);
+  var imgCount = images.length,
+      totalTime = (timeOnSlide + timeBetweenSlides) * (imgCount - 1),
+      slideRatio = (timeOnSlide / totalTime)*100, 
+      moveRatio = (timeBetweenSlides / totalTime)*100,
+      basePercentage = 100/imgCount,
+      position = 0,
+      css = document.createElement("style"); 
+  css.type = "text/css";
+  css.innerHTML += "#slidy { text-align: left; margin: 0; font-size: 0; position: relative; width: " + (imgCount * 100) + "%;  }\n"; 
+  css.innerHTML += "#slidy img { float: left; width: " + basePercentage + "%; }\n";
+  css.innerHTML += "@"+keyframeprefix+"keyframes slidy {\n"; 
+  for (i=0;i<(imgCount-1); i++) { // 
+    position+= slideRatio; 
+    css.innerHTML += position+"% { left: -"+(i * 100)+"%; }\n";
+    position += moveRatio;
+    css.innerHTML += position+"% { left: -"+((i+1) * 100)+"%; }\n";
+}
+  css.innerHTML += "}\n";
+  css.innerHTML += "#slidy { left: 0%; "+keyframeprefix+"transform: translate3d(0,0,0); "+keyframeprefix+"animation: "+totalTime+"s slidy infinite; }\n"; 
+document.body.appendChild(css);
+}
+
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</body>
+</html>
