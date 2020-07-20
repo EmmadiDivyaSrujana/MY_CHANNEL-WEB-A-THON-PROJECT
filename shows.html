@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My channel</title>
+  <link href="foot.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Belgrano" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <style>
+    body{
+background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.3)), url(pic6.png); 
+height: 200vh;
+background-size: cover;
+background-position: center;
+}
+    .main {
+      background-color: purple;
+      height: 14%;
+      width: 100%;
+      position: absolute;
+      left: 0%;
+      top: 0%;
+    }
+    .intro{
+      position: absolute;
+       left: 10%;
+       top: 20%;
+       background-color: lightgrey;
+       height: 9%;
+       width: auto;
+       border-radius: 6px;
+    }
+
+    .main1{
+      height: 5%;
+      width: 0.3%;
+      position: absolute;
+      top: 35%;
+      left: 5%;
+      background-color: red;
+    }
+    .main1 p{
+      font-size: 20px;
+
+    }
+    .main1 p{
+      font-size: 30px;
+      position: absolute;
+      top: -5px;
+      left: 20px;
+    }
+    .main1 ul{
+      position: absolute;
+      left: 1070px;
+      list-style-type: none;
+  float: right;
+    }
+    .main1 ul li{
+      display: block;
+    }
+    .main1 ul li a{
+  text-decoration: none;
+  background-color: black;
+  border-radius: 30px;
+  color: white;
+  padding: 5px 20px; 
+  border:1px solid transparent;
+    transition: 0.6s ease;
+    font-family: century gothic;
+    font-size: 17px;
+    }
+    .main1 ul li a:hover{
+background-color: grey;
+color: black;
+border-radius: 6px;
+}
+table{
+margin-top: 250px;
+margin-left: 25px;
+}
+table td{
+  padding: 50px;
+}
+.main2{
+      height: 5%;
+      width: 0.3%;
+      position: absolute;
+      top: 101%;
+      left: 5%;
+      background-color: green;
+}
+.main2 p{
+
+  font-size: 30px;
+      position: absolute;
+      top: -5px; 
+      left: 20px;
+
+}
+  .main2 ul{
+      position: absolute;
+      left: 1070px;
+      list-style-type: none;
+  float: right;
+    }
+    .main2 ul li{
+      display: block;
+    }
+    .main2 ul li a{
+  text-decoration: none;
+  background-color: black;
+  border-radius: 30px;
+  color: white;
+  padding: 5px 20px; 
+  border:1px solid transparent;
+    transition: 0.6s ease;
+    font-family: century gothic;
+    font-size: 17px;
+    }
+    .main2 ul li a:hover{
+background-color: grey;
+color: black;
+border-radius: 6px;
+}
+.table{
+  position: justify;
+margin-top: 104px;
+margin-left: 72px;
+}
+.table td{
+  padding: 2px;
+  
+}
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.instagram:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+</style>
+</head>
+<body>
+<div class="main">
+  <font color="white" size="20">M</font> <font color="white" size="10">y</font> <font color="white" size="20"> C</font><font color="white" size="10">hannel.com</font>
+</div>
+<div class="all">
+  <div class="main1">
+    <p><font color="white">Trending</font></p>
+  <ul>
+    <li><a href="#">More></a></li>
+  </ul>
+  </div>
+</div>
+  <table><hr color="white">
+    <hr color="white">
+  <tr>
+    <td><img src="1.png" width="250px" height="330px"><figcaption align="center"><font color="white">GAME OF THRONES</figcaption></td>
+    <td><img src="2.png" width="250px" height="330px"><figcaption align="center"><font color="white">FRIENDS</figcaption></font></td>
+    <td><img src="3.png" width="250px" height="330px"><figcaption align="center"><font color="white">HOUSE OF CARDS</figcaption></td>
+    <td><img src="8.png" width="250px" height="330"><figcaption align="center"><font color="white">THE BIG BANG THEORY</figcaption></td>
+  </tr>
+</table>
+<div class="main2">
+<p><font color="white">Movies</font></p>
+<ul>
+  <li><a href="#">More></a></li>
+</ul>
+</div>
+</div>
+<table cellpadding="10px" class="table">
+<tr>
+  <td><img src="a.png" width="250px" height="330px"><figcaption align="center"><font color="white">BADLA</figcaption></td>
+  <td><img src="b.png" width="250px" height="330px"><figcaption align="center"><font color="white">AVENGERS-INFINITY WAR</figcaption></td>
+  <td><a href="episode1.html"><img src="e.png"  width="250px" height="330px"></a><figcaption align="center"><font color="white">THE GIFTED</figcaption></td>
+  <td><img src="d.png"  width="250px" height="330px"><figcaption align="center"><font color="white">ROBOT 2.0</figcaption></td>
+</tr>
+  </table>
+<footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify"><i>MyChannel.com</i> is the perfect place for all your favourite content like shows, live tv and interviews</p>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shows</a></li>
+                <li><a href="#">Latest Content</a></li>
+                <li><a href="#">Interviews</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy;  All Rights Reserved by 
+           <a href="#">My Channel</a>.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+  </footer>
+</body>
+</html>
+  
